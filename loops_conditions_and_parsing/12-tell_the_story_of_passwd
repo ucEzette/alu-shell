@@ -1,13 +1,8 @@
 #!/usr/bin/env bash
-# This script displays formatted information about users from /etc/passwd.
+# script that tells the story of passwd
+# f1:USERNAME f2:PASSWORD f3:USERID f4:GROUPID f5:UIF f6:HOME f7:COMMAND
 
-# Open the /etc/passwd file and read line by line
-while IFS=: read -r username _ userid _ homedir shell; do
-    # Get the group ID from the user ID (assumes user ID is numeric)
-    group_id=$((userid / 1000)) # This is a simplification for demonstration
-
-    # Format the output as required
-    echo "The user $username is part of the $group_id gang, lives in $homedir and rides $shell."
-    echo "User ID's place is protected by the passcode $userid, more info about the user here: $userid."
-    echo "-------------------"
+while IFS=: read -r f1 f2 f3 f4 f5 f6 f7
+do
+    echo "The user $f1 is part of the $f4 gang, lives in $f6 and rides $f7. $f3's place is protected by the passcode $f2, more info about the user here: $f5"
 done < /etc/passwd
