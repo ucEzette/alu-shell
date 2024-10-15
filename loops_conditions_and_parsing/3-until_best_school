@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+
+counts=1
+
+until [ $counts -gt 10 ]
+do
+    echo "Best School"
+  
+    ((counts ++))
+done
