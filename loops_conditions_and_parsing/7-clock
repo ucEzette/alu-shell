@@ -13,8 +13,11 @@ do
     # Loop through minutes from 1 to 59
     while [ $minutes -le 59 ]
     do
-        echo "$hours hour(s) and $minutes minute(s)"
-        
+        echo "$hours hour(s)"
+
+        	while [ $minutes -le 59 ]
+	do
+		echo "$minutes"
         # Increment the minutes
         minutes=$((minutes + 1))
     done
