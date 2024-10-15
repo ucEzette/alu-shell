@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# This script displays numbers from 1 to 20 and custom messages for the 4th, 9th, and 17th iterations using a while loop and case statement.
+
+# Initialize the counter
+counts=1
+
+# Loop from 1 to 20
+while [ $counts -le 20 ]
+do
+    # Use case statement to check the counter value
+    case $counts in
+        4)
+            echo "$counts"
+            echo "bad luck from China"
+            ;;
+        9)
+            echo "$counts"
+            echo "bad luck from Japan"
+            ;;
+        17)
+            echo "$counts"
+            echo "bad luck from Italy"
+            ;;
+        *)
+            # Display the number for all other iterations
+            echo "$counts"
+            ;;
+    esac
+
+    # Increment the counter
+    ((counts++))
+done

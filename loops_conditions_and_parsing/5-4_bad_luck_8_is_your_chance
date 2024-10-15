@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# This script loops from 1 to 10 and displays custom messages for the 4th and 8th iterations.
+# It uses a while loop along with if, elif, and else statements.
+
+# Initialize the counter
+counts=1
+
+# Loop from 1 to 10
+while [ $counts -le 10 ]
+do
+    if [ $counts -eq 4 ]; then
+        # Display "bad luck" for the 4th iteration
+        echo "bad luck"
+    elif [ $counts -eq 8 ]; then
+        # Display "good luck" for the 8th iteration
+        echo "good luck"
+    else
+        # Display "Best School" for all other iterations
+        echo "Best School"
+    fi
+
+    # Increment the counter
+    ((counts++))
+done
